@@ -32,9 +32,9 @@
         $placename = $autosave->getValue('soccer', 'placename');
     }
 	if (!empty($vars['object']->location)) {
-        $placename = $vars['object']->location;
+        $location = $vars['object']->location;
     } else {
-        $placename = $autosave->getValue('soccer', 'location');
+        $location = $autosave->getValue('soccer', 'location');
     }
 	if (!empty($vars['object']->address)) {
         $address = $vars['object']->address;
@@ -42,14 +42,14 @@
         $address = $autosave->getValue('soccer', 'address');
     }
     if (!empty($vars['object']->teamscore)) {
-        $weather = $vars['object']->teamscore;
+        $teamscore = $vars['object']->teamscore;
     } else {
-        $weather = $autosave->getValue('soccer', 'teamscore');
+        $teamscore = $autosave->getValue('soccer', 'teamscore');
     }
-    if (!empty($vars['object']->opponnentscore)) {
-        $weather = $vars['object']->opponnenscore;
+    if (!empty($vars['object']->opponentscore)) {
+        $opponentscore = $vars['object']->opponentscore;
     } else {
-        $weather = $autosave->getValue('soccer', 'opponentscore');
+        $opponentscore = $autosave->getValue('soccer', 'opponentscore');
     }
 	
     if (!empty($vars['object'])) {
