@@ -14,9 +14,11 @@
             <?php
         }
     ?>
-            <div class=""><H4><span></span> Final Score: Panther's <?= htmlentities(strip_tags($vars['object']->getteamscore()), ENT_QUOTES, 'UTF-8'); ?>, <?= htmlentities(strip_tags($vars['object']->gettitle()), ENT_QUOTES, 'UTF-8'); ?>: <?= htmlentities(strip_tags($vars['object']->getopponentscore()), ENT_QUOTES, 'UTF-8'); ?></span></h4></div>
+            <div class=""><p><span class="fa fa-pencil-square"></span> Final Score: Annandale Panthers <?= htmlentities(strip_tags($vars['object']->getteamscore()), ENT_QUOTES, 'UTF-8'); ?>, <?= htmlentities(strip_tags($vars['object']->gettitle()), ENT_QUOTES, 'UTF-8'); ?>: <?= htmlentities(strip_tags($vars['object']->getopponentscore()), ENT_QUOTES, 'UTF-8'); ?></span></div>
 
+<?php if (!empty($vars['object']->getSoccerDate())) {?>
             <div class=""><p><span class="fa fa-calendar"></span> Game Date and Time: <?= htmlentities(strip_tags($vars['object']->getSoccerDate()), ENT_QUOTES, 'UTF-8'); ?></span></p></div>
+<?php } ?>
 
 <?php if (!empty($vars['object']->getWeather())) {?>
 			<div class=""><p><span class="fa fa-cloud"></span> Game time weather: <?= htmlentities(strip_tags($vars['object']->getWeather()), ENT_QUOTES, 'UTF-8'); ?></span></p></div>
@@ -29,8 +31,6 @@
 <?php if (!empty($vars['object']->getLocation())) {?>
 			<div class=""><p><span class="fa fa-location-arrow"></span><?= htmlentities(strip_tags($vars['object']->getLocation()), ENT_QUOTES, 'UTF-8'); ?></span></p></div>
 <?php } ?>
-
-
 
 <?php
 
